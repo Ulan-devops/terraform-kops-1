@@ -6,5 +6,3 @@ s3_tfstate_file   = "infrastructure.tfstate"          #Will be used to set backe
 
 environment       = "dev"  
 
-max_size          = "48"
-min_size          = "3"

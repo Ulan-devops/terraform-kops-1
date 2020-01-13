@@ -28,7 +28,7 @@ resource "aws_launch_configuration" "master-eu-west-1a-masters-huseyinakten-net"
   iam_instance_profile        = "${aws_iam_instance_profile.masters-huseyinakten-net.id}"
   security_groups             = ["${aws_security_group.masters-huseyinakten-net.id}"]
   associate_public_ip_address = false
-  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-eu-west-1a.masters.huseyinakten.net_user_data")}"
+  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-a.masters.net_user_data")}"
 
   root_block_device = {
     volume_type           = "gp2"
@@ -51,7 +51,7 @@ resource "aws_launch_configuration" "master-eu-west-1b-masters-huseyinakten-net"
   iam_instance_profile        = "${aws_iam_instance_profile.masters-huseyinakten-net.id}"
   security_groups             = ["${aws_security_group.masters-huseyinakten-net.id}"]
   associate_public_ip_address = false
-  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-eu-west-1b.masters.huseyinakten.net_user_data")}"
+  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-b.masters.net_user_data")}"
 
   root_block_device = {
     volume_type           = "gp2"
@@ -74,7 +74,7 @@ resource "aws_launch_configuration" "master-eu-west-1c-masters-huseyinakten-net"
   iam_instance_profile        = "${aws_iam_instance_profile.masters-huseyinakten-net.id}"
   security_groups             = ["${aws_security_group.masters-huseyinakten-net.id}"]
   associate_public_ip_address = false
-  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-eu-west-1c.masters.huseyinakten.net_user_data")}"
+  user_data                   = "${file("${path.module}/data/aws_launch_configuration_master-c.masters.net_user_data")}"
 
   root_block_device = {
     volume_type           = "gp2"
@@ -97,7 +97,7 @@ resource "aws_launch_configuration" "nodes-huseyinakten-net" {
   iam_instance_profile        = "${aws_iam_instance_profile.nodes-huseyinakten-net.id}"
   security_groups             = ["${aws_security_group.nodes-huseyinakten-net.id}"]
   associate_public_ip_address = false
-  user_data                   = "${file("${path.module}/data/aws_launch_configuration_nodes.huseyinakten.net_user_data")}"
+  user_data                   = "${file("${path.module}/data/aws_launch_configuration_nodes.net_user_data")}"
 
   root_block_device = {
     volume_type           = "gp2"
